@@ -12,14 +12,14 @@ function a(e){//i love chat
     c.style.left= coords.x-12+'px'
     c.style.top= coords.y-12+'px'
     document.body.insertBefore(c, u)
-    console.log('created', c);
+   // console.log('created', c);
     setTimeout(() => {
         c.classList.add('fade-out');
     }, 10);
     c.addEventListener('transitionend', function(){
-        console.log("hello");
+        //console.log("hello");
         c.parentNode.removeChild(c);
     })
 
 }
-window.addEventListener("mousemove", a)
+window.addEventListener("mousemove", a)//make a little circle to follow the cursor around :o
