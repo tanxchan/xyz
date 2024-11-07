@@ -35,19 +35,22 @@ h4::selection,h5::selection,h6::selection{
     color: var(--color-background)
 }
 div.cursor-circle{
-    height: 32px;
-    width: 32px;
-    background-color: #30629b;
+    height: 0px;
+    width: 0px;
+    background-color: rgba(116, 143, 243, 0.556);
     border-radius: 50%;
     position:fixed;
-    opacity:0.5;
-    pointer-events:none;
+    opacity:1;
+    z-index:5;
+    box-shadow: 0 0 21px 20px rgba(116, 143, 243, 0.556);
+    /* pointer-events:none; */
+    transition-duration: 100ms;
     /*transition-duration: 10s;*/
 }
-div.cursor-circle.fade-out{
+/* div.cursor-circle.fade-out{
     transition:opacity 1s;
     opacity: 0;
-}
+} */
     
 .underlay{
     position:fixed;
@@ -262,6 +265,12 @@ section h2, .experience-card h3, .tenure{
 
 footer{
     display:flex;
+    background-color: var(--color-background);
+    /* z-index:10; */
+    width:auto;
+    padding:auto;
+    padding-top:1rem;
+    height:auto;
     justify-content: space-between;
     align-items: flex-start;
 }
